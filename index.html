@@ -5,9 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Music Player</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+                    <span class="material-symbols-outlined md-30">keyboard_arrow_left</span>
+                </div>
+                <div class="circle">
+                    <span class="material-symbols-outlined md-30">menu</span>
+                </div>
+            </nav>
+            <img src="./media/thumbnail.png" class="song-img">
+            <h1>Low Life High Life</h1>
+            <p>Dan Heing</p>
+            <audio controls>
+                <source src="media/Dan Heing - Low Life High Life.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="progress">
+            <div class="controls">
+                <div class="">
+                    <span class="material-symbols-outlined md-30">fast_rewind</span>
+                </div>
+                <div class="">
+                    <span class="material-symbols-outlined md-30">play_arrow</span>
+                </div>
+                <div class="">
+                    <span class="material-symbols-outlined md-30">fast_forward</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
