@@ -8,13 +8,24 @@ song.onloadedmetadata = function(){
 }
 
 function playPause(){
-    if(ctrlIcon.textContent === "pause"){
+    if(ctrlIcon.textContent === "play_arrow"){
+        song.play();
+        ctrlIcon.textContent = "pause";
+    }
+    else{
         song.pause();
         ctrlIcon.textContent = "play_arrow";
     }
-    else{
-        song.play();
-        ctrlIcon.textContent = "pause";
-        console.log(ctrlIcon.textContent);
-    }
+}
+
+if(song.play()){
+    setInterval(()=>{
+        progress.value = song.currentTime;
+    },500);
+}
+
+progress.onchange = function(){
+    song.play();
+    song.currentTime = progress.value;
+    ctrlIcon.textContent = "pause";
 }
