@@ -21,18 +21,18 @@
             <img src="./media/thumbnail.png" class="song-img">
             <h1>Low Life High Life</h1>
             <p>Dan Heing</p>
-            <audio controls>
+            <audio controls id="song">
                 <source src="media/Dan Heing - Low Life High Life.mp3" type="audio/mpeg">
             </audio>
             <input type="range" value="0" id="progress">
             <div class="controls">
-                <div class="">
+                <div>
                     <span class="material-symbols-outlined md-30">fast_rewind</span>
                 </div>
-                <div class="">
-                    <span class="material-symbols-outlined md-30">play_arrow</span>
+                <div onclick="playPause()">
+                    <span class="material-symbols-outlined md-30" id="ctrlIcon">play_arrow</span>
                 </div>
-                <div class="">
+                <div>
                     <span class="material-symbols-outlined md-30">fast_forward</span>
                 </div>
             </div>
